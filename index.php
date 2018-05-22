@@ -21,11 +21,10 @@ $cadastros = $db->exibeCadastro();
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="vendor/font-aewsome/css/HelveticaUltraLt_0.css" rel="stylesheet">
+
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -33,7 +32,7 @@ $cadastros = $db->exibeCadastro();
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
 
-  </head>
+</head>
 
   <body id="page-top">
 
@@ -112,7 +111,7 @@ $cadastros = $db->exibeCadastro();
               <div class="control-group col-md-8" align="left">
 
                   <label>Telefone</label>
-                  <input type="tel" name="telefone" class="form-control fa-underline" placeholder="Digite o Telefone" id="phone" required data-validation-required-message="O campo Telefone é obrigatório!">
+                  <input type="tel" name="telefone" class="form-control fa-underline" placeholder="(000)99999-9999" id="phone" maxlength="15">
                   <p class="help-block text-danger"></p>
 
               </div>
@@ -122,7 +121,8 @@ $cadastros = $db->exibeCadastro();
                     <button type="submit" class="botao">CADASTRAR</button>
                   </div><br>
             </form>
-          </div>
+
+        </div>
             </div>
           </div>
         </div>
@@ -170,8 +170,13 @@ $cadastros = $db->exibeCadastro();
       <div class="container text-center">
         <h2 class="mb-4">
         <?php 
-        if(isset($cadastros)){
-          print_r($cadastros[0]);
+        if(!empty($cadastros))
+        {
+        $cadastro = $cadastros[0];
+        print_r ($cadastro['nome']);?><br><?php 
+        print_r ($cadastro['email']);?><br><?php 
+        print_r ($cadastro['telefone']);?><br><?php
+        echo "Faculdade de Belo Horizonte"; 
         }
         else
           echo "Desenvolvido por: Henrique L. Fernandes";
@@ -188,10 +193,14 @@ $cadastros = $db->exibeCadastro();
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/jquery/jquery.mask.min.js"></script> 
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    
 
   </body>
 
 </html>
+
+

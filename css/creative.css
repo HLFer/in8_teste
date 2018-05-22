@@ -1,32 +1,39 @@
-body,
-html {
+
+ @font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaUltraLT_0.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
   width: 100%;
   height: 100%;
 }
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'HelveticaUltraLT'!important;
 }
 
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #F05F40;
+  border-color: #fff!important;
 }
 
 hr.light {
-  border-color: #fff;
+  border-color: #fff!important;
 }
 
 a {
-  color: #F05F40;
+  color: #fff!important;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: #f05f40;
+  color: #fff!important;
 }
 
 h1,
@@ -35,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'HelveticaUltraLT';
 }
 
 .bg-primary {
@@ -59,31 +66,31 @@ section {
 }
 
 ::-moz-selection {
-  color: #fff;
+  color: #fff!important;
   background: #212529;
   text-shadow: none;
 }
 
 ::selection {
-  color: #fff;
+  color: #fff!important;
   background: #212529;
   text-shadow: none;
 }
 
 img::selection {
-  color: #fff;
+  color: #fff!important;
   background: transparent;
 }
 
 img::-moz-selection {
-  color: #fff;
+  color: #fff!important;
   background: transparent;
 }
 
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-  background-color: #fff;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #29abe2;
+  font-family: 'HelveticaUltraLT';
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -92,12 +99,12 @@ img::-moz-selection {
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: lowercase;
-  color: #F05F40;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #fff!important;
+  font-family: 'HelveticaUltraLT';
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #f05f40;
+  color: #fff!important;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
@@ -110,18 +117,18 @@ img::-moz-selection {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-  color: #F05F40;
+  color: #fff!important;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-  color: #F05F40 !important;
+  color: #fff !important;
   background-color: transparent;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
-  background-color: transparent;
+  background-color: #29abe2;
 }
 
 @media (min-width: 992px) {
@@ -133,7 +140,7 @@ img::-moz-selection {
     color: rgba(255, 255, 255, 0.7);
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: #fff;
+    color: #fff!important;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 1rem;
@@ -144,25 +151,25 @@ img::-moz-selection {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #fff;
+    color: #fff!important;
   }
   #mainNav.navbar-shrink {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-    background-color: #fff;
+    background-color: #fff!important;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #29abe2;
+    color: #29abe2!important;
   }
   #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #29abe2;
+    color: #fff!important;
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: #fff;
+    color: #fff!important;
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #29abe2;
+    color: #fff!important;
   }
 }
 
@@ -212,7 +219,7 @@ header.masthead p {
   header.masthead h1 {
     font-size: 6rem;
     text-align: left;
-    font-family: Helvetica;
+    font-family: 'HelveticaUltraLT';
     font-weight: 100;
   }
 }
@@ -237,7 +244,7 @@ header.masthead p {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(255,255,255);
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -254,7 +261,7 @@ header.masthead p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'HelveticaUltraLT';
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -285,7 +292,7 @@ header.masthead p {
 }
 
 .text-primary {
-  color: #F05F40 !important;
+  color: #fff !important;
 }
 
 .btn {
@@ -293,7 +300,7 @@ header.masthead p {
   text-transform: lowercase;
   border: none;
   border-radius: 300px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'HelveticaUltraLT';
 }
 
 .btn-xl {
@@ -301,17 +308,17 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #F05F40;
-  border-color: #F05F40;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #ee4b28 !important;
+  background-color: #fff !important;
 }
 
 .btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255) !important;
 }
 
 button.botao{
