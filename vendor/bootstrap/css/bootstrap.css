@@ -63,7 +63,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
   color: #212529;
   text-align: left;
   background-color: #fff;
@@ -360,11 +359,10 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
+
+  font-weight: 100 !important;
+  line-height: 2 !important;
+  color: inherit !important;
 }
 
 h1, .h1 {
@@ -1524,16 +1522,17 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-right: 1px solid #29abe2;
+  border-bottom: 1px solid #29abe2;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 1px solid #29abe2;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #29abe2;
 }
 
 .table .table {
@@ -1714,6 +1713,7 @@ pre code {
   background-color: #212529;
   border-color: #32383e;
 }
+
 
 .table .thead-light th {
   color: #495057;
@@ -2392,7 +2392,7 @@ fieldset:disabled a.btn {
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgb(41, 171, 226);
 }
 
 .btn-secondary {
@@ -4263,7 +4263,7 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: #29abe2;
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -4311,11 +4311,11 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-toggler {
   color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgb(41, 171, 226);
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("/img/hamburguer.svg");
 }
 
 .navbar-dark .navbar-text {
@@ -6090,17 +6090,17 @@ button.bg-danger:focus {
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
-  background-color: #dae0e5 !important;
+  background-color: #dae0e5;
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #343a40;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #1d2124 !important;
+  background-color: #1d2124;
 }
 
 .bg-white {
@@ -8956,10 +8956,20 @@ a.text-dark:hover, a.text-dark:focus {
   .table {
     border-collapse: collapse !important;
   }
-  .table td,
-  .table th {
-    background-color: #fff !important;
+  .table td, .table th {
+   padding: .75rem !important;
+   vertical-align: top !important;
+   border-bottom: 1px solid #29abe2 !important;
   }
+
+  tbody>tr>td#id{
+    color: #012d51 !important;
+  }
+
+  tbody>tr>td#informacoes{
+    color: #808080 !important;
+  }
+
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #dee2e6 !important;

@@ -23,7 +23,9 @@ $cadastros = $db->exibeCadastro();
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-aewsome/css/HelveticaUltraLt_0.css" rel="stylesheet">
+    <link href="vendor/roboto-light/stylesheet.css" rel="stylesheet">
+    <link href="vendor/roboto-regular/stylesheet.css" rel="stylesheet">
+    <link href="vendor/helvetica-regular/stylesheet.css" rel="stylesheet">
 
 
     <!-- Plugin CSS -->
@@ -40,7 +42,7 @@ $cadastros = $db->exibeCadastro();
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="nav-link" href="https://in8.com.br/" target="_blank"><img src="img/logo-in8-dev.svg" alt="Logo" height="35"></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -63,12 +65,12 @@ $cadastros = $db->exibeCadastro();
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
+            <h1 class="text-uppercase1">
               <strong>ESTÁGIO</strong>
             </h1>
-          </div>
-          <div class="col-lg-10 mx-auto">
-            <p class="text-faded mb-8">PROVA DE SELEÇÃO</p>
+            <h1 class="text-uppercase2">
+              <strong>PROVA DE SELEÇÃO</strong>
+            </h1>
           </div>
         </div>
       </div>
@@ -111,13 +113,12 @@ $cadastros = $db->exibeCadastro();
               <div class="control-group col-md-8" align="left">
 
                   <label>Telefone</label>
-                  <input type="tel" name="telefone" class="form-control fa-underline" placeholder="(000)99999-9999" id="phone" maxlength="15">
+                  <input type="tel" name="telefone" class="form-control" placeholder="(000)99999-9999" id="phone" maxlength="15">
                   <p class="help-block text-danger"></p>
 
               </div>
               <br>
-                <div id="success"></div>
-                  <div class="form-group" align="center">
+                  <div class="control-group col-md-8">
                     <button type="submit" class="botao">CADASTRAR</button>
                   </div><br>
             </form>
@@ -139,7 +140,7 @@ $cadastros = $db->exibeCadastro();
           </div>
           <div class="col-lg-12 text-center">
             <table class="table">
-              <thead>
+              <thead class="titulo">
                 <tr>
                   <th></th>
                   <th>Nome</th>
@@ -151,11 +152,11 @@ $cadastros = $db->exibeCadastro();
               <tbody>
                 <?php foreach ($cadastros as $key => $cadastro): ?>
                   <tr>
-                    <td><?= $cadastro['id'] ?></td>
-                    <td><?= $cadastro['nome'] ?></td>
-                    <td><?= $cadastro['email'] ?></td>
-                    <td><?= $cadastro['nascimento'] ?></td>
-                    <td><?= $cadastro['telefone'] ?></td>
+                    <td id="id"><?= $cadastro['id'] ?></td>
+                    <td id="informacoes"><?= $cadastro['nome'] ?></td>
+                    <td id="informacoes"><?= $cadastro['email'] ?></td>
+                    <td id="informacoes"><?= $cadastro['nascimento'] = date('d/m/Y', strtotime($cadastro['nascimento'])); ?></td>
+                    <td id="informacoes"><?= $cadastro['telefone'] ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>

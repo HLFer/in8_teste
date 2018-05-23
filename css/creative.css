@@ -1,18 +1,11 @@
 
- @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('../fonts/HelveticaUltraLT_0.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body, html {
   width: 100%;
   height: 100%;
 }
 
 body {
-  font-family: 'HelveticaUltraLT'!important;
+  font-family: 'robotolight'!important;
 }
 
 hr {
@@ -36,21 +29,22 @@ a:hover {
   color: #fff!important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'HelveticaUltraLT';
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'robotolight';
+  display: block;
 }
 
 .bg-primary {
   background-color: #29abe2 !important;
 }
 
-.bg-dark {
+section#rodape.bg-dark.text-white{
   background-image: url('../img/rodape.jpg') !important;
+  background-repeat: no-repeat;
+}
+
+section#rodape{
+  color: #fff;
 }
 
 .text-faded {
@@ -58,11 +52,13 @@ h6 {
 }
 
 section {
-  padding: 8rem 0;
+  padding: 4rem 0;
 }
 
 .section-heading {
-  margin-top: 0;
+  margin-top:1em;
+  color:#29abe2;
+  font-size: 3.2em;
 }
 
 ::-moz-selection {
@@ -90,7 +86,7 @@ img::-moz-selection {
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #29abe2;
-  font-family: 'HelveticaUltraLT';
+  font-family: 'robotolight';
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -100,7 +96,7 @@ img::-moz-selection {
   font-weight: 700;
   text-transform: lowercase;
   color: #fff!important;
-  font-family: 'HelveticaUltraLT';
+  font-family: 'robotolight';
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -219,7 +215,7 @@ header.masthead p {
   header.masthead h1 {
     font-size: 6rem;
     text-align: left;
-    font-family: 'HelveticaUltraLT';
+    font-family: 'robotolight';
     font-weight: 100;
   }
 }
@@ -261,7 +257,7 @@ header.masthead p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
-  font-family: 'HelveticaUltraLT';
+  font-family: 'robotolight';
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -300,7 +296,7 @@ header.masthead p {
   text-transform: lowercase;
   border: none;
   border-radius: 300px;
-  font-family: 'HelveticaUltraLT';
+  font-family: 'robotolight';
 }
 
 .btn-xl {
@@ -322,17 +318,41 @@ header.masthead p {
 }
 
 button.botao{
-  font-size: 50px;
+  font-size: 3em;
   background-color: #012d51;
   color:#29abe2;
   border: none;
-  width: 400px;
-  height: 80px;
-  font-weight: 100;
+  width: 8em;
+  height: 1.8em;
 }
 
 button.botao:hover{
     background-color: #fff;
     color:#29abe2;
     cursor:pointer;
+}
+form#contactForm>div.control-group.col-md-8>label{
+  font-family: 'robotoregular';
+  color:#fff;
+  font-size: 90%; 
+}
+div.container>div.row>div.col-lg-8.mx-auto.text-center>div.cadastro>p{
+  font-family: 'robotolight';
+  color:#fff;
+  font-size: 3.5em; 
+}
+div.container.my-auto>div.row>div.col-lg-10.mx-auto>h1.text-uppercase1>strong{
+  font-family: 'robotolight';
+  color:#fff;
+  font-size: 1.1em; 
+  text-transform:uppercase;
+  display:block;
+}
+
+div.container.my-auto>div.row>div.col-lg-10.mx-auto>h1.text-uppercase2>strong{
+  font-family: 'robotolight';
+  color:#fff;
+  font-size: .47em; 
+  text-transform:uppercase;
+  display: block;
 }

@@ -4834,8 +4834,8 @@
 
           $$$1(Selector.STICKY_CONTENT).each(function (index, element) {
             var actualMargin = $$$1(element)[0].style.marginRight;
-            var calculatedMargin = $$$1(element).css('margin-right');
-            $$$1(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
+            var calculatedMargin = $$$1(element).css('margin-left');
+            $$$1(element).data('margin-left', actualMargin).css('margin-left', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
           }); // Adjust navbar-toggler margin
 
           $$$1(Selector.NAVBAR_TOGGLER).each(function (index, element) {
@@ -4861,10 +4861,10 @@
         }); // Restore sticky content and navbar-toggler margin
 
         $$$1(Selector.STICKY_CONTENT + ", " + Selector.NAVBAR_TOGGLER).each(function (index, element) {
-          var margin = $$$1(element).data('margin-right');
+          var margin = $$$1(element).data('margin-left');
 
           if (typeof margin !== 'undefined') {
-            $$$1(element).css('margin-right', margin).removeData('margin-right');
+            $$$1(element).css('margin-left', margin).removeData('margin-left');
           }
         }); // Restore body padding
 
