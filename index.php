@@ -105,7 +105,7 @@ $cadastros = $db->exibeCadastro();
               <div class="control-group col-md-8" align="left">
 
                   <label>Nascimento</label>
-                  <input type="date" name="nascimento" class="form-control"></textarea>
+                  <input id="nascimento" type="date" name="nascimento" class="form-control"></textarea>
                   <p class="help-block text-danger"></p>
 
               </div>
@@ -117,10 +117,10 @@ $cadastros = $db->exibeCadastro();
                   <p class="help-block text-danger"></p>
 
               </div>
-              <br>
+              <br><br><br>
                   <div class="control-group col-md-8">
-                    <button type="submit" class="botao">CADASTRAR</button>
-                  </div><br>
+                    <button type="submit" class="botao" id="cadastrar">CADASTRAR</button>
+                  </div>
             </form>
 
         </div>
@@ -139,24 +139,24 @@ $cadastros = $db->exibeCadastro();
             <h2 class="section-heading">LISTA DE CADASTRO</h2>
           </div>
           <div class="col-lg-12 text-center">
-            <table class="table">
+            <table class="table" id="tabela">
               <thead class="titulo">
                 <tr>
                   <th></th>
                   <th>Nome</th>
                   <th>Email</th>
                   <th>Nascimento</th>
-                  <th>Telefone</th>
+                  <th id="telefone">Telefone</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="corpo-tabela">
                 <?php foreach ($cadastros as $key => $cadastro): ?>
-                  <tr>
+                  <tr id="tabela" class="tabela">
                     <td id="id"><?= $cadastro['id'] ?></td>
                     <td id="informacoes"><?= $cadastro['nome'] ?></td>
                     <td id="informacoes"><?= $cadastro['email'] ?></td>
                     <td id="informacoes"><?= $cadastro['nascimento'] = date('d/m/Y', strtotime($cadastro['nascimento'])); ?></td>
-                    <td id="informacoes"><?= $cadastro['telefone'] ?></td>
+                    <td id="informacoes-telefone"><?= $cadastro['telefone'] ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>

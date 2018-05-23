@@ -29,7 +29,8 @@ h1,h2,h3,h4,h5,h6{
     background-color:#29abe2!important
 }
 section#rodape.bg-dark.text-white{
-    background-image: url('../img/rodape.jpg')!important;
+    background-image: url('../img/rodape.jpg');
+    text-align: center!important;
 }
 .text-faded{
     color:#fff; 
@@ -38,7 +39,7 @@ section#rodape.bg-dark.text-white{
     font-weight: 100;
 }
 section{
-    padding:1.7rem 0
+    padding:5.6rem;
 }
 .section-heading{
     margin-top:1em;
@@ -258,18 +259,22 @@ header.masthead p{
         .btn-primary:active,.btn-primary:focus{
             box-shadow:0 0 0 .2rem rgba(255, 255, 255)!important
         } 
-        button.botao{
+        button#cadastrar.botao{
             font-size: 3em;
             background-color: #012d51;
             color:#29abe2;
             border: none;
             width: 8em;
-            height: 1.8em;
+            height: 1.7em;
+            position: relative;
+            overflow: auto;
         }
-        button.botao:hover{
+        button#cadastrar.botao:hover{
             background-color: #fff;
             color:#29abe2;
             cursor: pointer;
+            position: relative;
+            overflow: auto;
         }
 form#contactForm>div.control-group.col-md-8>label{
     font-family: 'robotoregular';
@@ -309,6 +314,66 @@ color:#012d51;
 .table>tbody>tr>td#informacoes{
     font-family: 'helvetica_condensedregular';
     color:#808080;
-    font-size: 1.2em; 
+    font-size: 1.1em; 
 }
     
+section#rodape.bg-dark.text-white>div.container.text-center>h2.mb-4{
+    font:#fff !important;
+    font-family: 'robotoregular' !important;
+    font-size: 110% !important;
+    line-height: 180%;
+}
+input#name{
+    background-color: #29abe2;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color:#fff;
+}
+
+input#email{
+    background-color: #29abe2;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color:#fff;
+}
+
+input#nascimento{
+    background-color: #29abe2;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color:#fff;
+}
+input#phone{
+    background-color: #29abe2;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color: #fff;
+}
+
+form#contactForm{
+    align-content: center;
+}
+
+thead.titulo{
+    border-top:none;
+}
+th#telefone{
+    border-right: none !important;
+}
+td#informacoes-telefone{
+    border-right: none !important;
+    font-family: 'helvetica_condensedregular';
+    color:#808080;
+    font-size: 1.1em;
+}
+tbody.corpo-tabela{
+    border-bottom: none !important;
+}
+h2.section-heading{
+    margin-top: 0em;
+    margin-bottom: 2em;
+}

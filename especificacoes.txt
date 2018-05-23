@@ -16,9 +16,9 @@ FONTES:
 	
 	Números: Roboto Light - OK
 	Títulos das colunas (Nome, E-mail...): Roboto Regular - OK
-	Informações (Fulano Beltrano...): Helvetica Condensed Regular
+	Informações (Fulano Beltrano...): Helvetica Condensed Regular - OK
 
--Rodapé: Roboto Light
+-Rodapé: Roboto Light - OK
 
 CORES:
 -Fundo de cadastro: #29abe2 - OK
